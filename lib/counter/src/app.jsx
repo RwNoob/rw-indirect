@@ -3,7 +3,7 @@ import viteLogo from '/vite.svg';
 import './app.css';
 export function App() {
     const countRef = ref(0);
-    return () => (
+    return (
         <div id='app'>
             <div>
                 <a href='https://vitejs.dev' target='_blank'>

@@ -1,5 +1,5 @@
 export function App() {
-    return () => (
+    return (
         <div id='app'>
             <h1>Rw App</h1>
         </div>
