@@ -14,6 +14,6 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "rw-jsx": "^1.0.0-beta.0"
+    "rw-indirect": "^1.0.0-beta.1"
   }
 }
