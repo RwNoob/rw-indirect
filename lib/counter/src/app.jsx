@@ -9,6 +9,9 @@ export function App() {
                 <a href='https://vitejs.dev' target='_blank'>
                     <img src={viteLogo} class='logo' alt='Vite logo' />
                 </a>
+                <a href='https://www.npmjs.com/package/rw-indirect' target='_blank'>
+                    <p>NPM Rw</p>
+                </a>
                 <a href='https://github.com/RwNoob/rw-indirect' target='_blank'>
                     <p>GitHub Rw</p>
                 </a>
