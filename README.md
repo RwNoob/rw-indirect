@@ -50,10 +50,12 @@ npm create rw-indirect <project-name || null>
   - relevance component: [ Case, Default ]
   - use
     ```jsx
-    <Switch key={key}>
-       <Case value={}></Case>
-       <Case value={}></Case>
-       <Case value={}></Case>
+    const changeRef = ref(0)
+    <button onClick={() => changeRef.value++}>add</button>
+    <Switch key={changeRef}>
+       <Case value={0}></Case>
+       <Case value={1}></Case>
+       <Case value={2}></Case>
        <Default></Default>
     </Switch>
     ```
@@ -63,7 +65,15 @@ npm create rw-indirect <project-name || null>
   - reslevance component: [ Await, Then, Catch, Finally ]
   - use
     ```jsx
-    <Async key={key}>
+    const getTodo = async () => {
+      const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+      const data = await res.json();
+      await waiting(1000);
+      return data;
+  	};
+    const promiseRef = ref(getTodo());
+    <button onClick={() => (promiseRef.value = getTodo())}>Get Todo</button>
+    <Async promise={promiseRef}>
         <Await>...code</Await>
         <Then>[Node | Function]</Then>
         <Catch>[Node | Function]</Catch>
@@ -73,7 +83,7 @@ npm create rw-indirect <project-name || null>
 
 ## HTMLAttributes
 
-***Getter***
+***Unique processing properties***
 - describe: Read some attributes of the element
 - value: [ Ref | Function ]
 - use
