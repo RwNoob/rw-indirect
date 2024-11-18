@@ -83,7 +83,7 @@ npm create rw-indirect <project-name || null>
 
 ## Attributes
 
-***Unique processing properties***
+***Unique processing attributes***
 - describe: Read some attributes of the element
 - value: [ Ref | Function ]
 - use
