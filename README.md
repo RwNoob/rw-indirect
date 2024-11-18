@@ -199,6 +199,7 @@ npm create rw-indirect <project-name || null>
       // cleanup code
     }
   }
+  // When the parameter is a function
   <input rw-focus={focus}/>
   ```
 
