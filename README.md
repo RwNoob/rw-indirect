@@ -4,7 +4,7 @@
 - [rw-indirect](#rw-indirect)
   - [Build Instructions](#build-instructions)
   - [Built-in Components](#built-in-components)
-  - [HTMLAttributes](#htmlattributes)
+  - [Attributes](#attributes)
   - [Not finished describing](#not-finished-describing)
 
 ## Build Instructions
@@ -35,7 +35,7 @@ npm create rw-indirect <project-name || null>
   - props: [ each: Array ]
   - use
     ```jsx
-    <Index each={[]}>[Node | Function]</Index>
+    <Index each={[]}>...code</Index>
     ```
 - ***Visible***
   - describe: Set the display CSS property of an inline style
@@ -61,7 +61,7 @@ npm create rw-indirect <project-name || null>
     ```
 - ***Async***
   - describe: Request data asynchronously
-  - props: [ promise: Promise ]
+  - props: [ promise: Promise | Ref ]
   - reslevance component: [ Await, Then, Catch, Finally ]
   - use
     ```jsx
@@ -75,13 +75,13 @@ npm create rw-indirect <project-name || null>
     <button onClick={() => (promiseRef.value = getTodo())}>Get Todo</button>
     <Async promise={promiseRef}>
         <Await>...code</Await>
-        <Then>[Node | Function]</Then>
-        <Catch>[Node | Function]</Catch>
+        <Then>...code</Then>
+        <Catch>...code</Catch>
         <Finally>...code</Finally>
     </Async>
     ```
 
-## HTMLAttributes
+## Attributes
 
 ***Unique processing properties***
 - describe: Read some attributes of the element
