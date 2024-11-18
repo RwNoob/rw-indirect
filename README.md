@@ -5,6 +5,7 @@
   - [Build Instructions](#build-instructions)
   - [Built-in Components](#built-in-components)
   - [Attributes](#attributes)
+  - [Directive](#directive)
   - [Not finished describing](#not-finished-describing)
 
 ## Build Instructions
@@ -178,6 +179,27 @@ npm create rw-indirect <project-name || null>
       </select>
     ```
 
-
+## Directive
+- description: Convenience properties
+- use
+  ```jsx
+  directive('focus',(el, binding, updateHook) => {
+    console.log(el, binding);
+    updateHook((newValue, oldValue) => {});
+    return () => {
+      // cleanup code
+    }
+  })
+  <input rw-focus />
+  ``` 
+  ```jsx
+  function focus(el){
+    el.focus();
+    return () => {
+      // cleanup code
+    }
+  }
+  <input rw-focus={focus}/>
+  ```
 
 ## Not finished describing
