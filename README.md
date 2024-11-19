@@ -81,6 +81,26 @@ npm create rw-indirect <project-name || null>
         <Finally>...code</Finally>
     </Async>
     ```
+- ***Match***
+  - describe: Labeled judgment
+  - props: [ ]
+  - reslevance component: [ Show, Otherwise ]
+  - use
+    ```jsx
+    const count = ref(0);
+    <button onClick={() => (count.value ++)}>Count: {count}</button>
+    <Match>
+      <Show when={() => count.value > 0 && count.value < 5}>
+          <div>Show 1 - 4</div>
+      </Show>
+      <Show when={() => count.value > 5 && count.value < 10}>
+          <div>Show 6 - 9</div>
+      </Show>
+      <Otherwise>
+          <div>Otherwise</div>
+      </Otherwise>
+    </Match>
+    ```
 
 ## Attributes
 
