@@ -6,6 +6,9 @@
   - [Built-in Components](#built-in-components)
   - [Attributes](#attributes)
   - [Directive](#directive)
+  - [provide-inject](#provide-inject)
+  - [life cycle](#life-cycle)
+  - [Render](#render)
   - [Not finished describing](#not-finished-describing)
 
 ## Build Instructions
@@ -126,7 +129,7 @@ npm create rw-indirect <project-name || null>
         <div get:offsetWidth={(width) => (offsetWidth.value = width)}></div>
     ```
 ***Form binding***
-- description: Simplify form writing
+- describe: Simplify form writing
 - use
   - `bind:value`
     ```jsx
@@ -200,7 +203,7 @@ npm create rw-indirect <project-name || null>
     ```
 
 ## Directive
-- description: Convenience properties
+- describe: Convenience properties
 - use
   ```jsx
   directive('focus',(el, binding, updateHook) => {
@@ -223,4 +226,56 @@ npm create rw-indirect <project-name || null>
   <input rw-focus={focus}/>
   ```
 
+## provide-inject
+- ***provide***
+  - describe: Provides a value that can be injected by descendant components
+  - use
+    ```jsx
+    function App(){
+      provide('name', 'provide value')
+      return <>
+        <Test />
+      </>
+    }
+    ```
+- ***inject***
+  - describe: Inject a value provided by the superior
+  - use
+    ```jsx
+    function Test(){
+      const value = inject('name', 'defaultValue');
+      return <h1>Test</h1>
+    }
+    ```
+## life cycle
+- ***onMount***
+  - describe: Execute after mounting
+  - use
+    ```jsx
+    function App(){
+      onMount(() => {
+        console.log('Mount App');
+      })
+      return <h1>App</h1>
+    }
+    ```
+- ***onCleanup***
+  - describe: Execute after uninstalling
+  - use
+    ```jsx
+    function App() {
+      onCleanup(() => {
+        console.log('Cleanup App');
+      })      
+      return <h1>App</h1>
+    }
+    ```
+## Render
+- ***render***
+  - describe: Render to page
+  - use
+    ```jsx
+    /** [ If the second parameter is not filled in, a div with id="app" will be automatically created. ] */
+    render(<h1>Rw Indirect</h1>)
+    ```
 ## Not finished describing
