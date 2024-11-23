@@ -213,9 +213,11 @@ npm create rw-indirect <project-name || null>
       // cleanup code
     }
   })
+  // Can have parameters: rw-value:arg$trim$number...
   <input rw-focus />
   ``` 
   ```jsx
+  <!-- Deprecated -->
   function focus(el){
     el.focus();
     return () => {
