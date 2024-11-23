@@ -9,11 +9,11 @@
   },
   "devDependencies": {
     "vite": "^5.4.9",
-    "vite-plugin-rw-indirect-compiler": "latest"
+    "vite-plugin-rw-indirect-compiler": "*"
   },
   "author": "",
   "license": "",
   "dependencies": {
-    "rw-indirect": "latest"
+    "rw-indirect": "*"
   }
 }
