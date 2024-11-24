@@ -1,0 +1,20 @@
+{
+  "name": "router",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.4.9",
+    "vite-plugin-rw-indirect-compiler": "latest"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "rw-indirect": "latest",
+    "rw-indirect-store": "latest"
+  }
+}
