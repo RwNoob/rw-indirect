@@ -1,5 +1,5 @@
 {
-  "name": "store",
+  "name": "store-todo",
   "private": true,
   "version": "1.0.0",
   "type": "module",
