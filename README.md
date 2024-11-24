@@ -41,6 +41,13 @@ npm create rw-indirect <project-name || null>
     ```jsx
     <Index each={[]}>...code</Index>
     ```
+- ***For***
+  - describe: Loop data
+  - props: [ each: Array, key?: (item: any) => any ]
+  - use
+    ```jsx
+    <For each={[1,2,3,4]} key={(item) => item}>...code</For>
+    ```
 - ***Visible***
   - describe: Set the display CSS property of an inline style
   - props: [ key: Boolean ]
@@ -126,6 +133,8 @@ npm create rw-indirect <project-name || null>
     ```jsx
         const offsetWidth = ref(0);
         <div get:offsetWidth={offsetWidth}></div>
+
+        <!-- Deprecated  -->
         <div get:offsetWidth={(width) => (offsetWidth.value = width)}></div>
     ```
 ***Form binding***
